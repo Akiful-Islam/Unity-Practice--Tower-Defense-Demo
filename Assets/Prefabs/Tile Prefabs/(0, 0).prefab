@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4496420361063321467}
   - component: {fileID: -9101856890642050852}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: (0, 0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defensePrefab: {fileID: 3219458064393657486, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
-  isPlaceable: 1
+  _isPlaceable: 1
 --- !u!1 &6855621315713654504
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8967135078429153333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -330,3 +330,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b789680f2ac87642a5d07a73152bf5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _blockedColor: {r: 1, g: 1, b: 1, a: 0.49803922}

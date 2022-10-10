@@ -6,14 +6,14 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField] private GameObject _defensePrefab;
-    public bool isPlaceable;
-
+    [SerializeField] private bool _isPlaceable;
+    public bool IsPlaceable { get => _isPlaceable; }
     private void OnMouseDown()
     {
-        if (isPlaceable)
+        if (_isPlaceable)
         {
             Instantiate(_defensePrefab, transform.position, Quaternion.identity);
-            isPlaceable = false;
+            _isPlaceable = false;
         }
     }
 }
