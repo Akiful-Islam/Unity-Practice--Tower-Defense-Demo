@@ -8,6 +8,13 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private List<Waypoint> _path = new List<Waypoint>();
     [SerializeField][Range(0f, 10f)] private float _moveSpeed = 0.25f;
 
+    private Enemy _enemy;
+
+    private void Awake()
+    {
+        _enemy = GetComponent<Enemy>();
+    }
+
     private void OnEnable()
     {
         FindPath();
@@ -51,5 +58,6 @@ public class EnemyMover : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+        _enemy.TakeMoney();
     }
 }

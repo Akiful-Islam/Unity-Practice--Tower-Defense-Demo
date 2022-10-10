@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] private GameObject _defensePrefab;
+    [SerializeField] private Defender _defensePrefab;
     [SerializeField] private bool _isPlaceable;
     public bool IsPlaceable { get => _isPlaceable; }
     private void OnMouseDown()
     {
         if (_isPlaceable)
         {
-            Instantiate(_defensePrefab, transform.position, Quaternion.identity);
-            _isPlaceable = false;
+            bool isPlaced = _defensePrefab.Create(_defensePrefab, transform.position);
+            _isPlaceable = !isPlaced;
         }
     }
 }

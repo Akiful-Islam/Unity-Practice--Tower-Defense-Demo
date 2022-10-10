@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c2f2deda1afe548b400073f3668c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defensePrefab: {fileID: 3219458064393657486, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+  _defensePrefab: {fileID: -3435775265899740856, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
   _isPlaceable: 1
 --- !u!1 &6855621315713654504
 GameObject:

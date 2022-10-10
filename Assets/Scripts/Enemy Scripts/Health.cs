@@ -8,8 +8,11 @@ public class Health : MonoBehaviour
     public float maxHP = 5f;
     private float _currentHP;
 
+    private Enemy _enemy;
+
     private void Awake()
     {
+        _enemy = GetComponent<Enemy>();
         _currentHP = maxHP;
     }
 
@@ -24,6 +27,7 @@ public class Health : MonoBehaviour
         if (_currentHP <= 0)
         {
             gameObject.SetActive(false);
+            _enemy.RewardMoney();
         }
     }
 }
