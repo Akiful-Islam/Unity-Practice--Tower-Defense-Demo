@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4495258798109311718}
+  - component: {fileID: 4496420361063321467}
   - component: {fileID: -9101856890642050852}
   m_Layer: 0
   m_Name: Tile
@@ -34,6 +35,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4496420361063321467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5062023962849016611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.7, z: 10}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!114 &-9101856890642050852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c2f2deda1afe548b400073f3668c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defensePrefab: {fileID: 3219458064393657486, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+  isPlaceable: 1
 --- !u!1 &6855621315713654504
 GameObject:
   m_ObjectHideFlags: 0
