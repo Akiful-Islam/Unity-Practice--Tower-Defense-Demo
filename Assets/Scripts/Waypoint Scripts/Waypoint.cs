@@ -6,6 +6,7 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField] private Defender _defensePrefab;
+    [Tooltip("Can a defender be placed here?")]
     [SerializeField] private bool _isPlaceable;
     public bool IsPlaceable { get => _isPlaceable; }
     private void OnMouseDown()
