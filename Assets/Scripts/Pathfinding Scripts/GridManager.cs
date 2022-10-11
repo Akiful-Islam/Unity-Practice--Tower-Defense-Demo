@@ -7,6 +7,8 @@ public class GridManager : MonoBehaviour
 {
     [SerializeField] private Vector2Int _gridSize;
     private Dictionary<Vector2Int, Node> _grid = new Dictionary<Vector2Int, Node>();
+    public Dictionary<Vector2Int, Node> Grid { get => _grid; }
+
 
     private void Awake()
     {
@@ -23,5 +25,15 @@ public class GridManager : MonoBehaviour
                 _grid.Add(coordinates, new Node(coordinates, true));
             }
         }
+    }
+
+    public Node GetNode(Vector2Int coordinates)
+    {
+        if (_grid.ContainsKey(coordinates))
+        {
+            return _grid[coordinates];
+        }
+
+        return null;
     }
 }
