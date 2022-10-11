@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class Health : MonoBehaviour
 {
-    public float maxHP = 5f;
+    public float MaxHP = 5f;
     private float _currentHP;
 
     private Enemy _enemy;
@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         _enemy = GetComponent<Enemy>();
-        _currentHP = maxHP;
+        _currentHP = MaxHP;
     }
 
     private void OnParticleCollision(GameObject other)
