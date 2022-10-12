@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4496420361063321467}
   - component: {fileID: -9101856890642050852}
   m_Layer: 0
-  m_Name: (0, 0)
+  m_Name: Grass Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (0 , 0)
+  m_text: (x , y)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -332,3 +332,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultColor: {r: 1, g: 1, b: 1, a: 1}
   _blockedColor: {r: 1, g: 1, b: 1, a: 0.49803922}
+  _exploredColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  _pathColor: {r: 1, g: 0.5, b: 0, a: 1}
