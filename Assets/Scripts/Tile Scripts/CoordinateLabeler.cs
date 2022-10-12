@@ -12,12 +12,12 @@ public class CoordinateLabeler : MonoBehaviour
     [SerializeField] private Color _blockedColor = Color.gray;
     private TextMeshPro _label;
     private Vector2Int _coordinates = new Vector2Int();
-    private Tile _waypoint;
+    private Waypoint _waypoint;
 
     private void Awake()
     {
         _label = GetComponent<TextMeshPro>();
-        _waypoint = GetComponentInParent<Tile>();
+        _waypoint = GetComponentInParent<Waypoint>();
         DisplayCoordinates();
     }
 
