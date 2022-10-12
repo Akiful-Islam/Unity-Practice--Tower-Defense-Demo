@@ -34,9 +34,13 @@ public class Tile : MonoBehaviour
     {
         if (_gridManager.GetNode(_coordinates).isWalkable && !_pathFinder.WillBlockPath(_coordinates))
         {
-            bool isPlaced = _defensePrefab.Create(_defensePrefab, transform.position);
-            _isPlaceable = !isPlaced;
-            _gridManager.BlockNode(_coordinates);
+            bool isSuccessful = _defensePrefab.Create(_defensePrefab, transform.position);
+            if (isSuccessful)
+            {
+                _gridManager.BlockNode(_coordinates);
+                _pathFinder.NotifyReceivers();
+                _isPlaceable = false;
+            }
         }
     }
 }

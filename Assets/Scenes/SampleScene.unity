@@ -15257,6 +15257,10 @@ PrefabInstance:
       propertyPath: _balanceText
       value: 
       objectReference: {fileID: 86415895}
+    - target: {fileID: 4734056715567703748, guid: 436e4475e0503bb4daf76e987df7e01d, type: 3}
+      propertyPath: _startingBalance
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 4734056715567703749, guid: 436e4475e0503bb4daf76e987df7e01d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -15314,18 +15318,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8610987129837059393, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059395, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059395, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059422, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8610987129837059422, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -15360,6 +15372,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8610987129837059423, guid: 3ea761dcc350d57458cdd309b172350c, type: 3}

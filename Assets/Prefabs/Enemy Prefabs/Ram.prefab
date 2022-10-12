@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a670779b3af0df54f8ab49ebd4081207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moneyReward: 25
+  _moneyPenalty: 10
 --- !u!114 &6705958263529964308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,22 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de67f8cd59640804a880de4ce2cbe8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _moveSpeed: 1
+  _moveSpeed: 3
 --- !u!114 &4456080284715596825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,4 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b521b9c8c3783429f2355fdc216428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  MaxHP: 5
