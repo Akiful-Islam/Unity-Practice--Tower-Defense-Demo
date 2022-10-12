@@ -44,6 +44,7 @@ public class CoordinateLabeler : MonoBehaviour
             _coordinates.y = Mathf.RoundToInt(transform.parent.position.z / _gridManager.UnityGridSize);
             _label.text = $"({_coordinates.x} , {_coordinates.y})";
         }
+        return;
 
     }
 
