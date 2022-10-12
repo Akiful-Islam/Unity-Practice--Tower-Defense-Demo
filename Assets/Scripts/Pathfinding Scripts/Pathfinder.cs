@@ -30,11 +30,39 @@ public class Pathfinder : MonoBehaviour
     {
         _startNode = _grid[_startCoordinates];
         _endNode = _grid[_endCoordinates];
-        BreadthFirstSearch();
-        BuildPath();
+        GetNewPath();
     }
 
+    public List<Node> GetNewPath()
+    {
+        _gridManager.ResetNodes();
+        BreadthFirstSearch();
+        return BuildPath();
+    }
 
+    private void BreadthFirstSearch()
+    {
+        _frontier.Clear();
+        _reached.Clear();
+
+        bool isRunning = true;
+
+        _frontier.Enqueue(_startNode);
+        _reached.Add(_startNode.Coordinates, _startNode);
+
+        while (_frontier.Count > 0 && isRunning)
+        {
+            _currentSearchNode = _frontier.Dequeue();
+            _currentSearchNode.isExplored = true;
+
+            ExploreNeighbours();
+
+            if (_currentSearchNode.Coordinates == _endCoordinates)
+            {
+                isRunning = false;
+            }
+        }
+    }
 
     private void ExploreNeighbours()
     {
@@ -59,26 +87,6 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    private void BreadthFirstSearch()
-    {
-        bool isRunning = true;
-        _frontier.Enqueue(_startNode);
-        _reached.Add(_startNode.Coordinates, _startNode);
-
-        while (_frontier.Count > 0 && isRunning)
-        {
-            _currentSearchNode = _frontier.Dequeue();
-            _currentSearchNode.isExplored = true;
-
-            ExploreNeighbours();
-
-            if (_currentSearchNode.Coordinates == _endCoordinates)
-            {
-                isRunning = false;
-            }
-        }
-    }
-
     private List<Node> BuildPath()
     {
         List<Node> path = new List<Node>();
@@ -97,5 +105,26 @@ public class Pathfinder : MonoBehaviour
         path.Reverse();
 
         return path;
+    }
+
+    public bool WillBlockPath(Vector2Int coordinates)
+    {
+        if (_grid.ContainsKey(coordinates))
+        {
+            bool previousState = _grid[coordinates].isWalkable;
+            _grid[coordinates].isWalkable = false;
+
+            List<Node> newPath = GetNewPath();
+            _grid[coordinates].isWalkable = previousState;
+
+            if (newPath.Count <= 1)
+            {
+                GetNewPath();
+                return true;
+            }
+        }
+
+        return false;
+
     }
 }

@@ -38,9 +38,13 @@ public class CoordinateLabeler : MonoBehaviour
 
     private void DisplayCoordinates()
     {
-        _coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-        _coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
-        _label.text = $"({_coordinates.x} , {_coordinates.y})";
+        if (_gridManager != null)
+        {
+            _coordinates.x = Mathf.RoundToInt(transform.parent.position.x / _gridManager.UnityGridSize);
+            _coordinates.y = Mathf.RoundToInt(transform.parent.position.z / _gridManager.UnityGridSize);
+            _label.text = $"({_coordinates.x} , {_coordinates.y})";
+        }
+
     }
 
     private void UpdateTileName()
